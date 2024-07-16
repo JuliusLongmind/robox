@@ -830,7 +830,7 @@ FUTURE+=( "https://yum.oracle.com/ISOS/OracleLinux/OL9/u4/x86_64/OracleLinux-R9-
 REPOS+=( "https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/leap/42.3/repo/oss/INDEX.gz" )
 
 # OpenSUSE 15.5
-REPOS+=( "https://download.opensuse.org/distribution/leap/15.5/repo/oss/INDEX.gz" )
+REPOS+=( "https://download.opensuse.org/distribution/leap/15.6/repo/oss/INDEX.gz" )
 
 # The templates are configured to use a static URL path which is more reliable. But
 # this check is enabled, it will trigger an alert when it's time to upgrade.
