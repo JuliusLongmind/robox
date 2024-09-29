@@ -52,7 +52,7 @@ mkdir -p "/etc/portage/package.mask"
 mkdir -p "/etc/portage/package.unmask"
 
 echo 'Setting Portage Profile'
-eselect profile set default/linux/amd64/17.1/no-multilib
+eselect profile set default/linux/amd64/23.0/no-multilib
 
 # Dynamically find the current stable profile.
 # cd /usr/portage
@@ -60,8 +60,8 @@ eselect profile set default/linux/amd64/17.1/no-multilib
 # eselect profile set $profile
 
 echo 'Emerging Dependencies'
-emerge sys-kernel/gentoo-kernel-bin sys-boot/grub app-editors/vim app-admin/sudo sys-apps/netplug sys-apps/dmidecode
-
+echo 'sys-kernel/installkernel grub dracut' > /etc/portage/package.use/installkernel
+emerge sys-kernel/installkernel sys-kernel/gentoo-kernel-bin sys-boot/grub app-editors/vim app-admin/sudo sys-apps/netplug sys-apps/dmidecode sys-apps/mlocate
 # If necessary, include the Hyper-V modules in the initramfs and then load them at boot.
 if [ "$(dmidecode -s system-manufacturer)" == "Microsoft Corporation" ]; then
   echo 'MODULES_HYPERV="hv_vmbus hv_storvsc hv_balloon hv_netvsc hv_utils"' >> /usr/share/genkernel/arch/x86_64/modules_load
