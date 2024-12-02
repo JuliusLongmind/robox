@@ -15,7 +15,7 @@ network --device eth0 --bootproto dhcp --noipv6 --hostname=alma9.localdomain
 bootloader --timeout=1 --append="net.ifnames=0 biosdevname=0 no_timer_check vga=792 nomodeset text"
 
 # repo --name=BaseOS
-url --url=https://dfw.mirror.rackspace.com/almalinux/9.3/BaseOS/ppc64le/os/
+url --url=https://dfw.mirror.rackspace.com/almalinux/9.5/BaseOS/ppc64le/os/
 
 %addon com_redhat_kdump --disable --reserve-mb=128
 %end
