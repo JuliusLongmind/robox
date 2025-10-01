@@ -20,8 +20,8 @@ network --device eth0 --bootproto dhcp --noipv6 --hostname=fedora42.localdomain
 bootloader --timeout=1 --append="net.ifnames=0 biosdevname=0 no_timer_check vga=792 nomodeset text"
 
 #### Prod Repo
-# url --url=https://dl.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/os/
-url --url=https://mirrors.edge.kernel.org/fedora/releases/42/Everything/x86_64/os/
+url --url=https://dl.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/os/
+# url --url=https://mirrors.edge.kernel.org/fedora/releases/42/Everything/x86_64/os/
 
 #### Archive Repo
 # url --url=https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/42/Everything/x86_64/os/
