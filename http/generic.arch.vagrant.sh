@@ -28,7 +28,6 @@ printf "Server = https://mirror.leaseweb.net/archlinux/\$repo/os/\$arch\n" >>/et
 printf "Server = https://mirrors.edge.kernel.org/archlinux/\$repo/os/\$arch\n" >>/etc/pacman.d/mirrorlist
 
 # Update the keyring and install the initial set of packages required to bootstrap a system.
-killall gpg-agent || exit 1
 find /etc/pacman.d/gnupg/ -type f -exec rm -f {} \; || exit 1
 pacman-key --init || exit 1
 pacman-key --populate archlinux || exit 1
