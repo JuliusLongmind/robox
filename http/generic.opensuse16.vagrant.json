@@ -1,0 +1,75 @@
+{
+  "hostname": {
+    "transient": "agama",
+    "static": ""
+  },
+  "user": {
+    "fullName": "Vagrant user",
+    "password": "vagrant",
+    "hashedPassword": false,
+    "userName": "vagrant"
+  },
+  "root": {
+    "password": "vagrant",
+    "hashedPassword": false
+  },
+  "software": {
+    "patterns": ["selinux"],
+    "packages": []
+  },
+  "product": {
+    "id": "openSUSE_Leap"
+  },
+  "storage": {
+    "drives": [
+      {
+        "search": "/dev/vda",
+        "partitions": [
+          {
+            "search": "*",
+            "delete": true
+          },
+          {
+            "generate": "default"
+          }
+        ]
+      }
+    ]
+  },
+  "network": {
+    "connections": [
+      {
+        "id": "Wired connection 1",
+        "method4": "auto",
+        "method6": "auto",
+        "ignoreAutoDns": false,
+        "interface": "enp1s0",
+        "status": "up",
+        "autoconnect": true,
+        "persistent": true
+      }
+    ]
+  },
+  "localization": {
+    "language": "en_US.UTF-8",
+    "keyboard": "us",
+    "timezone": "Europe/Berlin"
+  },
+  "files": [
+    {
+      "destination": "/etc/ssh/sshd_config.d/50-permit-root.conf",
+      "content": "PermitRootLogin yes",
+      "permissions": "0644",
+      "user": "root",
+      "group": "root"
+    }
+  ],
+  "scripts": {
+    "post": [
+      {
+        "name": "activate-sshd",
+        "content": "#!/usr/bin/bash\nsystemctl enable sshd.service\n"
+      }
+    ]
+  }
+}
