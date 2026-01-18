@@ -15,8 +15,8 @@ network --device eth0 --bootproto dhcp --noipv6 --hostname=alma10.localdomain
 bootloader --timeout=1 --append="net.ifnames=0 biosdevname=0 no_timer_check vga=792 nomodeset text"
 
 # repo --name=BaseOS
-#url --url=https://dfw.mirror.rackspace.com/almalinux/10.0/BaseOS/x86_64/os/
-url --url=https://mirrors.sth.sze.hu/almalinux/10.0/BaseOS/x86_64/os/
+#url --url=https://dfw.mirror.rackspace.com/almalinux/10.1/BaseOS/x86_64/os/
+url --url=https://ftp.bme.hu/almalinux/10.1/BaseOS/x86_64/os/
 
 %addon com_redhat_kdump --disable --reserve-mb=128
 %end
