@@ -18,7 +18,8 @@
     "packages": []
   },
   "product": {
-    "id": "openSUSE_Leap"
+    "id": "openSUSE_Leap",
+    "mode": "standard"
   },
   "storage": {
     "drives": [
@@ -43,7 +44,7 @@
         "method4": "auto",
         "method6": "auto",
         "ignoreAutoDns": false,
-        "interface": "enp1s0",
+        "interface": "ens3",
         "status": "up",
         "autoconnect": true,
         "persistent": true
